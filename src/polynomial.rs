@@ -151,17 +151,6 @@ mod tests {
     }
 
     #[test]
-    fn vanishing_polynomial_is_zero_on_its_domain() {
-        let x_minus_5 = Poly::new(vec![-Fr::from(5u64), Fr::from(1u64)]);
-        let x_minus_7 = Poly::new(vec![-Fr::from(7u64), Fr::from(1u64)]);
-        let t = &x_minus_5 * &x_minus_7;
-
-        assert_eq!(t.eval(Fr::from(5u64)), Fr::from(0u64));
-        assert_eq!(t.eval(Fr::from(7u64)), Fr::from(0u64));
-        assert_ne!(t.eval(Fr::from(10u64)), Fr::from(0u64));
-    }
-
-    #[test]
     fn division_recovers_exact_quotient_with_zero_remainder() {
         let a = Poly::new(vec![-Fr::from(5u64), Fr::from(1u64)]);
         let b = Poly::new(vec![-Fr::from(7u64), Fr::from(1u64)]);

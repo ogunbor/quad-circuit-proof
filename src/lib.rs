@@ -5,3 +5,4 @@ pub mod qap;
 pub mod r1cs;
 pub mod trusted_setup;
 pub mod proof;
+pub mod verify;
